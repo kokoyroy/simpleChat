@@ -1,6 +1,6 @@
 
 // make connection
-var socket = io.connect('https://kokoyroysimplechat.herokuapp.com/')
+var socket = io();
 var timer
 
 
