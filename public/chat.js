@@ -59,7 +59,7 @@ socket.on('chat', data => {
 })
 
 socket.on('feed', data => {
-    feedback.innerHTML += `<p><em> ${data} is typing...</em></p>`
+    feedback.innerHTML = `<p><em> ${data} is typing...</em></p>`
 })
 
 
