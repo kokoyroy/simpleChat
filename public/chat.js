@@ -59,6 +59,7 @@ socket.on('chat', data => {
 })
 
 socket.on('feed', data => {
+    console.log(data);
     feedback.innerHTML = `<p><em> ${data} is typing...</em></p>`
 })
 
