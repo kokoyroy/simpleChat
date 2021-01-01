@@ -30,12 +30,11 @@ function broadcast() {
 //emit event
 
 btn.addEventListener('click', () => {
-    if (handle.value) {
-        console.log('patithike to koumpi');
+    if (handle.value !== '') {
         emit()
     }
 })
-message.addEventListener('keypress', (params) => {
+message.addEventListener('keypress', () => {
     broadcast()
 })
 
