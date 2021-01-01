@@ -30,21 +30,18 @@ function broadcast() {
 //emit event
 
 btn.addEventListener('click', () => {
-    console.log('patithike to koumpi');
-    emit()
+    if (handle.value) {
+        console.log('patithike to koumpi');
+        emit()
+    }
 })
 message.addEventListener('keypress', (params) => {
-    if (params.key === 'Enter') {
-        emit()
-    } else {
-
-        broadcast()
-    }
+    broadcast()
 })
 
 //receive events
 socket.on('chat', data => {
-    feedback.innerHTML='';
+    feedback.innerHTML = '';
     console.log(data);
     if (data.handle === handle.value) {
         return output.innerHTML += '<p><strong>' + data.handle +
